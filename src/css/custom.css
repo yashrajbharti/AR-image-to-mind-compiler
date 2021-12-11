@@ -1,0 +1,68 @@
+/* stylelint-disable docusaurus/copyright-header */
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+:root {
+  --ifm-color-primary: #FF10F0;
+  --ifm-color-primary-dark: #FF10F0;
+  --ifm-color-primary-darker: #FF10F0;
+  --ifm-color-primary-darkest: #FF10F0;
+  --ifm-color-primary-light: #FF10F0;
+  --ifm-color-primary-lighter: #FF10F0;
+  --ifm-color-primary-lightest: #FF10F0;
+  --ifm-code-font-size: 95%;
+}
+
+.docusaurus-highlight-code-line {
+  background-color: rgb(72, 77, 91);
+  display: block;
+  margin: 0 calc(-1 * var(--ifm-pre-padding));
+  padding: 0 var(--ifm-pre-padding);
+}
+.docTitle_node_modules-\@docusaurus-theme-classic-lib-next-theme-DocItem- {
+  font-size: 1rem;
+  margin-bottom: calc(var(--ifm-leading-desktop) * var(--ifm-leading));
+}
+.navbar{
+  display: none;
+}
+.menu{
+  display: none;
+}
+.docSidebarContainer_node_modules-\@docusaurus-theme-classic-lib-next-theme-DocPage- {
+  display: none;
+}
+@media screen and (orientation:portrait)
+{
+.container{
+  margin: 10px;
+}
+}
+@media screen and (orientation:landscape)
+{
+.container{
+  margin: 100px;
+}
+}
+body{
+  background-color: #18181A;
+}
+h1{
+  color: #fff;
+}
+p{
+  color: #fff;
+}
+div{
+  color: #8C9494;
+}
+button{
+  border-radius: 30px !important;
+}
+.dropzone{
+  border-radius: 13px;
+}
