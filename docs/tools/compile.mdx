@@ -139,8 +139,23 @@ export const VisualizeTab = ({dataList, exportedBuffer}) => {
       top: ((100-width)/2) + "%"
     }
   }, [dataList, targetIndex, keyframeIndex]);
-  const downloadHandler = useCallback(() => {
+  const saveMind = async(blob) => {
+    let formdata = new FormData();
+    formdata.append("file", blob , "targets.mind");
+    let headers = new Headers();
+    headers.append("Accept", "application/json");
+    let requestOptions = {
+      method : 'POST',
+      body: formdata,
+      redirect: 'follow',
+      headers:headers
+    };
+    const response = await fetch("http://localhost:3001/upload", requestOptions);
+    console.log(await response.json());
+    };
+  const downloadHandler = useCallback(async() => {
     var blob = new Blob([exportedBuffer]);
+    await saveMind(blob)
     var aLink = window.document.createElement('a');
     aLink.download = 'targets.mind';
     aLink.href = window.URL.createObjectURL(blob);
