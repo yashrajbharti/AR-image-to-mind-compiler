@@ -3,10 +3,10 @@ module.exports = {
 
     {
       type: 'category',
-      label: 'Tools',
+      label: 'home',
       collapsed: true,
       items: [
-	'tools/compile'
+	       'home'
       ]
     },
     /*

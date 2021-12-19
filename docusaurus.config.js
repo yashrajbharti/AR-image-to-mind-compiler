@@ -2,12 +2,12 @@
 module.exports = {
   title: 'AR Annotation',
   tagline: 'web augmented reality - augmented images',
-  url: 'https://hiukim.github.io',
+  url: 'https://yashrajbharti.github.io',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.png',
-  organizationName: 'AR', // Usually your GitHub org/user name.
+  organizationName: 'yashrajbharti', // Usually your GitHub org/user name.
   projectName: 'self annotations', // Usually your repo name.
   plugins: ['docusaurus-plugin-sass'],
   presets: [
@@ -17,8 +17,6 @@ module.exports = {
         docs: {
 	  routeBasePath: '/',
           sidebarPath: require.resolve('./sidebars.js'),
-          // Please change this to your repo.
-          //editUrl: 'https://github.com/facebook/docusaurus/edit/master/website/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),

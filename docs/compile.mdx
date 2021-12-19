@@ -1,6 +1,8 @@
 ---
-id: compile
+id: home
 title: AR Annotation
+sidebar_label: Home
+slug: /
 ---
 
 import {useEffect, useRef, useState, useCallback, useMemo} from 'react';
@@ -122,7 +124,7 @@ export const VisualizeTab = ({dataList, exportedBuffer}) => {
     ctx.putImageData(imageData, 0, 0);
     for (let i = 0; i < matchingPoints.length; i++) {
       const point = matchingPoints[i];
-      drawPoint(ctx, '#ff0000', Math.round(point.x), Math.round(point.y), point.scale);
+      drawPoint(ctx, '#E45454', Math.round(point.x), Math.round(point.y), point.scale);
     }
   }, [dataList, targetIndex, keyframeIndex]);
   const numTargetRange = useMemo(() => {
@@ -150,17 +152,15 @@ export const VisualizeTab = ({dataList, exportedBuffer}) => {
       redirect: 'follow',
       headers:headers
     };
-    const response = await fetch("http://localhost:3001/upload", requestOptions);
+    const response = await fetch("http://192.241.202.10:80/upload", requestOptions);
     console.log(await response.json());
     };
   const downloadHandler = useCallback(async() => {
     var blob = new Blob([exportedBuffer]);
     await saveMind(blob)
     var aLink = window.document.createElement('a');
-    aLink.download = 'targets.mind';
-    aLink.href = window.URL.createObjectURL(blob);
+    aLink.href = "http://localhost:3000/AR/index.html";
     aLink.click();
-    window.URL.revokeObjectURL(aLink.href);
   }, [exportedBuffer]);
   return (
     <div>

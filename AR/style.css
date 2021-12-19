@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Zilla+Slab+Highlight:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@300;600;700&display=swap');
+  html,body{margin: 0; height: 100vh; overflow: hidden}
+body{
+  position: relative;
+}
+
+button{
+  border: 2px solid #fff;
+  border-radius: 25px;
+  font-weight: 700;
+  padding: 10px 15px;
+  font-family: 'Zilla Slab', serif;
+  color: #fff;
+  background-color: #FF10F0;
+  /* visibility: hidden; */
+}
+button:active{
+  border: 2px solid #FF10F0;
+  border-radius: 25px;
+  font-weight: bold;
+  padding: 10px 15px;
+  color: #FF10F0;
+  background-color: #fff;
+}
+.switch {
+  position: absolute;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  transform: translate(15px, 20px);
+  z-index: 1001;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+.switch input#toggleswitch {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #FF10F0;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #FF10F0;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+.mode {
+    position: absolute;
+    padding: 4px;
+    font-size: 13px;
+    font-family: 'Zilla Slab Highlight', cursive;
+    color: white;
+    transform: translate(82px, 17px);
+    width: 100px;
+}
+#textinput, #foo{
+  position: absolute;
+}
+#textinput input#inputtext{
+  padding: 8px 20px;
+  box-sizing: border-box;
+}
+
+#snap-button{
+  position: absolute;;
+  left: 50vw;
+  top: 90vh;
+  transform: translate(-50%, -1.5rem);
+  width: 140px;
+}
+ #inputtext{
+  width: 95px;
+  font-family: 'Zilla Slab', serif;
+  border-radius: 30px;
+  font-size: 13px;
+  transform: translate(189px, 16px);
+}
+.replacebutton{
+  padding-top: 8px;
+  transform: translate(289px, 15px);
+}
+button.replacebutton:active{
+  padding-top: 8px;
+}
+@media screen and (orientation:portrait) {
+  #inputtext:focus{
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0;
+    transform: translate(0px,0px);
+      }
+}
