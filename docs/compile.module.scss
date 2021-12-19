@@ -1,7 +1,10 @@
 .startButton {
   width: 100%;
 }
-
+.startButton:hover {
+color: #fff;
+background-color: #EE00E0;
+}
 .visualizeCanvasWrapper {
   position: relative;
   width: 100%;
