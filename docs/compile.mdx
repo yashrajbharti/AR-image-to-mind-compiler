@@ -105,12 +105,17 @@ export const VisualizeTab = ({dataList, exportedBuffer}) => {
     ctx.rect(centerX - width/2, centerY - width /2 , width, width);
     ctx.stroke();
   }, []);
-  useEffect(() => {
+  const sendHw = async(height, width) =>{
+  	 let requestOptions = {method: 'GET',redirect: 'follow'};
+	 let response  = await fetch(`localhost:3000/hw?height=${height}&width=${width}`, requestOptions);
+  }
+  useEffect(async() => {
     const targetImage = dataList[targetIndex].imageList[keyframeIndex];
     const matchingPoints = [...dataList[targetIndex].matchingData[keyframeIndex].maximaPoints, dataList[targetIndex].matchingData[keyframeIndex].minimaPoints];
     const canvas = canvasRef.current;
     canvas.width = targetImage.width;
     canvas.height = targetImage.height;
+    await sendHw(targetImage.height, targetImage.width);
     const ctx = canvas.getContext('2d');
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     const tData = new Uint8ClampedArray(targetImage.width * targetImage.height * 4);
