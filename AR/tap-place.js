@@ -41,8 +41,8 @@ const new2Element = document.createElement('a-entity')
     place.appendChild(newElement)
     place.appendChild(new2Element)
 
-    touchPoint.x  /= 2000;
-    touchPoint.y  /= 2000;
+    touchPoint.x  /= 2045;
+    touchPoint.y  /= 2045;
     touchPoint.z  = 0.00001;
     var x2 = touchPoint.x + 0.41;
     var y2 = touchPoint.y - 0.1;
