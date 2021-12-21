@@ -107,7 +107,7 @@ export const VisualizeTab = ({dataList, exportedBuffer}) => {
   }, []);
   const sendHw = async(height, width) =>{
   	 let requestOptions = {method: 'GET',redirect: 'follow'};
-	 let response  = await fetch(`localhost:3000/hw?height=${height}&width=${width}`, requestOptions);
+	 let response  = await fetch(`http://192.241.202.10:80/hw?height=${height}&width=${width}`, requestOptions);
   }
   useEffect(async() => {
     const targetImage = dataList[targetIndex].imageList[keyframeIndex];
