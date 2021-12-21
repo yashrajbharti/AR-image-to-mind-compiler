@@ -6,7 +6,7 @@ let width = 0;
 
   try {
     let requestOptions = { method: 'GET', redirect: 'follow' };
-    let response = await fetch(`http://192.241.202.10/hw`, requestOptions);
+    let response = await fetch(`https://artest.supportgenie.io/hw`, requestOptions);
     let result = await response.json()
     height = result.height;
     width = result.width;
